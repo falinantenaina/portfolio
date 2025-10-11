@@ -7,7 +7,8 @@ export const Footer = () => {
       <div>&copy;{new Date().getFullYear()} Falinantenaina</div>
       <div className="flex items-center gap-x-8">
         <Link
-          href="/"
+          href="https://www.linkedin.com/in/falinantenaina-ranaivojaona-42ba8133b/"
+          target="_blank"
           className="flex items-center gap-x-2"
           aria-label="Instagram"
         >
@@ -15,7 +16,8 @@ export const Footer = () => {
           <span className="max-xl:hidden">Instagram</span>
         </Link>
         <Link
-          href="/"
+          href="https://www.linkedin.com/in/falinantenaina-ranaivojaona-42ba8133b/"
+          target="_blank"
           className="flex items-center gap-x-2"
           aria-label="Linkedin"
         >
@@ -23,7 +25,8 @@ export const Footer = () => {
           <span className="max-xl:hidden">Linkedin</span>
         </Link>
         <Link
-          href="/"
+          href="https://github.com/Falinantenaina1"
+          target="_blank"
           className="flex items-center gap-x-2"
           aria-label="Github"
         >

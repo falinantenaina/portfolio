@@ -10,26 +10,29 @@ export const About = () => {
       <div className="flex items-center justify-center gap-y-16 max-lg:flex-col lg:gap-x-32">
         <div>
           <h2 className="bg-background border-primary mb-8 w-max rounded-tl-[2.5rem] rounded-br-[2.5rem] border-4 px-10 py-4 font-sans text-3xl max-md:mx-auto md:mb-16">
-            About me
+            À propos de moi
           </h2>
           <div className="bg-background flex flex-col gap-x-2 gap-y-2 rounded-2xl p-6">
             <p>
-              Hi, I&apos;m Falinantenaina, a passionate{' '}
-              <span className="text-primary">Web Application Developer</span>{' '}
-              from Antananarivo, Madagascar
+              Salut, je suis Falinantenaina, un{' '}
+              <span className="text-primary">
+                développeur d’applications web
+              </span>{' '}
+              passionné, basé à Antananarivo, Madagascar
             </p>
             <p>
-              My skill set spans various programming languages and frameworks,
-              including <span className="text-primary">HTML</span>,{' '}
+              Mon ensemble de compétences couvre plusieurs langages et
+              frameworks, notamment <span className="text-primary">HTML</span>,{' '}
               <span className="text-primary">CSS</span>,{' '}
               <span className="text-primary">JavaScript</span>,{' '}
               <span className="text-primary">React.js</span>,{' '}
-              <span className="text-primary">Next.js</span> and more.
+              <span className="text-primary">Next.js</span>,{' '}
+              <span className="text-primary">Express.js</span> et bien d’autres.
             </p>
             <p>
-              I&apos;m always keen on learning{' '}
-              <span className="text-primary">new technologies</span> and falling
-              in love with the process of mastering them.
+              Je suis toujours motivé à apprendre de{' '}
+              <span className="text-primary">nouvelles technologies</span> et
+              j’adore le processus qui consiste à les maîtriser.
             </p>
           </div>
         </div>

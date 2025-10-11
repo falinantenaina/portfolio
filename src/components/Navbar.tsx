@@ -6,19 +6,15 @@ import { useState } from 'react';
 
 const menus = [
   {
-    title: 'Home',
+    title: 'Accueil',
     href: '#home'
   },
   {
-    title: 'About',
+    title: 'A propos',
     href: '#about'
   },
   {
-    title: 'Tech-Stack',
-    href: '#tech'
-  },
-  {
-    title: 'Works',
+    title: 'Projets',
     href: '#works'
   },
   {

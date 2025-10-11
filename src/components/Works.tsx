@@ -5,21 +5,41 @@ import WorksCard, { WorksProps } from './WorksCard';
 const works: WorksProps[] = [
   {
     title: '3legant',
-    desc: '3legant is an e-commerce website for headphones, earbuds, and accessories.',
+    tech: [
+      'React',
+      'TypeScript',
+      'NodeJS',
+      'Express',
+      'Tailwinds',
+      'Shadcn',
+      'Axios',
+      'Zustand'
+    ],
     src: '/3legant.webp',
-    hrefDemo: 'https://3legant-roan.vercel.app/'
+    hrefDemo: 'https://3legant-roan.vercel.app/',
+    description:
+      'Ce projet est un site e-commerce moderne dédié à la vente d’écouteurs, de casques audio et d’accessoires.'
   },
   {
     title: 'swrnym',
-    desc: 'SWRNYM is a minimalist landing page to show dark and light mode in nextJS',
+    tech: ['NextJS', 'Tailwinds', 'Shadcn'],
     src: '/swrnym.webp',
-    hrefDemo: 'https://swrnym.vercel.app/'
+    hrefDemo: 'https://swrnym.vercel.app/',
+    description: ''
   },
   {
     title: 'movie-mg',
-    desc: 'Movie-MG is a movie listing website featuring popular, recent, and top-rated films.',
+    tech: ['React', 'TypeScript', 'Tailwinds', 'Fetch API'],
     src: '/movie.webp',
-    hrefDemo: 'https://movie-mg.vercel.app/'
+    hrefDemo: 'https://movie-mg.vercel.app/',
+    description: ''
+  },
+  {
+    title: 'Batman',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    src: '/batman.webp',
+    hrefDemo: 'https://batman-nate.vercel.app/',
+    description: ''
   }
 ];
 
@@ -27,10 +47,10 @@ export const Works = () => {
   return (
     <Section id="works" className="bg-card">
       <Heading
-        title="Works"
-        desc="I had the pleasure of working with these awesome projects"
+        title="Projets"
+        desc="J’ai eu le plaisir de travailler sur ces superbes projets"
       />
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
         {works.map((work) => (
           <WorksCard key={work.title} work={work} />
         ))}

@@ -29,12 +29,12 @@ export const Contact = () => {
       .then(
         () => {
           form.current?.reset();
-          toast.success('Your message is sent successfully ✅');
+          toast.success('Votre message a été envoyé avec succès ✅');
           setLoading(false);
         },
         () => {
           toast.error(
-            'There was an error sending your message. Please try again ❌'
+            'Une erreur est survenue lors de l’envoi de votre message. Veuillez réessayer ❌'
           );
           setLoading(false);
         }
@@ -45,35 +45,31 @@ export const Contact = () => {
     <Section id="contact">
       <Heading
         title="Contact"
-        desc="I’m currently available for freelance work"
+        desc="Envie de créer quelque chose d’exceptionnel ensemble? Écrivez-moi!"
       />
       <div className="mx-auto mt-8 max-w-sm lg:max-w-4xl">
         <form className="space-y-6" ref={form} onSubmit={sendEmail}>
           <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
             <div className="grid w-full items-center gap-2.5">
-              <Label htmlFor="firstname">
-                Firstname
-                <span className="text-primary align-top text-xs/2">*</span>
-              </Label>
-              <Input
-                type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="Firstname"
-                required
-              />
-            </div>
-            <div className="grid w-full items-center gap-2.5">
               <Label htmlFor="name">
-                Lastname
+                Nom
                 <span className="text-primary align-top text-xs/2">*</span>
               </Label>
               <Input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="name"
+                placeholder="Votre nom"
                 required
+              />
+            </div>
+            <div className="grid w-full items-center gap-2.5">
+              <Label htmlFor="firstname">Prénom</Label>
+              <Input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="Votre prénom"
               />
             </div>
           </div>
@@ -85,17 +81,8 @@ export const Contact = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Email"
+              placeholder="Votre email"
               required
-            />
-          </div>
-          <div className="grid w-full items-center gap-2.5">
-            <Label htmlFor="phone">Phone number</Label>
-            <Input
-              type="number"
-              id="phone"
-              name="phone"
-              placeholder="Phone number"
             />
           </div>
           <div className="grid w-full items-center gap-2.5">
@@ -103,7 +90,7 @@ export const Contact = () => {
               Message<span className="text-primary align-top text-xs/2">*</span>
             </Label>
             <Textarea
-              placeholder="Leave a message"
+              placeholder="Votre Message"
               cols={20}
               name="message"
               id="message"
@@ -115,11 +102,13 @@ export const Contact = () => {
           >
             {loading ? (
               <div className="flex items-center gap-x-1">
-                Sending Message <LoaderCircle className="animate-spin" />
+                Envoie...
+                <LoaderCircle className="animate-spin" />
               </div>
             ) : (
               <div className="flex items-center gap-x-1">
-                Send Message <Send />
+                Envoyer un message
+                <Send />
               </div>
             )}
           </Button>
