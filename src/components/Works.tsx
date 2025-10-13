@@ -21,25 +21,29 @@ const works: WorksProps[] = [
       'Ce projet est un site e-commerce moderne dédié à la vente d’écouteurs, de casques audio et d’accessoires.'
   },
   {
-    title: 'swrnym',
-    tech: ['NextJS', 'Tailwinds', 'Shadcn'],
-    src: '/swrnym.webp',
-    hrefDemo: 'https://swrnym.vercel.app/',
-    description: ''
-  },
-  {
     title: 'movie-mg',
     tech: ['React', 'TypeScript', 'Tailwinds', 'Fetch API'],
     src: '/movie.webp',
     hrefDemo: 'https://movie-mg.vercel.app/',
-    description: ''
+    description:
+      'App React + TypeScript qui récupère les films via API Fetch, avec pagination intégrée et interface moderne'
   },
+  {
+    title: 'swrnym',
+    tech: ['Reactn', 'NextJS', 'Tailwinds', 'Shadcn'],
+    src: '/swrnym.webp',
+    hrefDemo: 'https://swrnym.vercel.app/',
+    description:
+      'Landing page élégante en **Next.js + React**, avec mode **clair ou sombre** au choix. Design responsive, valorisation visuelle des voitures de rêve'
+  },
+
   {
     title: 'Batman',
     tech: ['HTML', 'CSS', 'JavaScript'],
     src: '/batman.webp',
     hrefDemo: 'https://batman-nate.vercel.app/',
-    description: ''
+    description:
+      'Site web immersif autour de l’univers Batman, avec sections dédiées aux héros, adversaires et films.'
   }
 ];
 
