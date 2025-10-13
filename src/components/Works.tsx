@@ -30,7 +30,7 @@ const works: WorksProps[] = [
   },
   {
     title: 'swrnym',
-    tech: ['Reactn', 'NextJS', 'Tailwinds', 'Shadcn'],
+    tech: ['React', 'NextJS', 'Tailwinds', 'Shadcn'],
     src: '/swrnym.webp',
     hrefDemo: 'https://swrnym.vercel.app/',
     description:
