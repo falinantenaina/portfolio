@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from 'lucide-react';
+import { Github, Linkedin, PhoneCall } from 'lucide-react';
 import Link from 'next/link';
 
 export const Footer = () => {
@@ -7,13 +7,13 @@ export const Footer = () => {
       <div>&copy;{new Date().getFullYear()} Falinantenaina</div>
       <div className="flex items-center gap-x-8">
         <Link
-          href="https://www.linkedin.com/in/falinantenaina-ranaivojaona-42ba8133b/"
+          href="https://wa.me/261343243730"
           target="_blank"
           className="flex items-center gap-x-2"
-          aria-label="Instagram"
+          aria-label="Phone"
         >
-          <Instagram className="text-primary" />
-          <span className="max-xl:hidden">Instagram</span>
+          <PhoneCall className="text-primary" />
+          <span className="max-xl:hidden">Phone</span>
         </Link>
         <Link
           href="https://www.linkedin.com/in/falinantenaina-ranaivojaona-42ba8133b/"
@@ -25,7 +25,7 @@ export const Footer = () => {
           <span className="max-xl:hidden">Linkedin</span>
         </Link>
         <Link
-          href="https://github.com/Falinantenaina1"
+          href="https://github.com/Falinantenaina"
           target="_blank"
           className="flex items-center gap-x-2"
           aria-label="Github"
