@@ -1,8 +1,9 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import { MenuIcon, X } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const menus = [
   {
@@ -25,9 +26,25 @@ const menus = [
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-background border-border sticky top-0 z-50 w-full border-b px-6 py-6 lg:px-6 xl:px-32 xl:py-8">
+    <nav
+      className={cn(
+        'border-border top-0 z-50 w-full border-b px-6 py-6 backdrop-blur-md md:sticky lg:px-6 xl:px-32 xl:py-8',
+        scrolled ? 'bg-background/80 shadow-lg' : 'bg-background'
+      )}
+    >
       <div className="flex items-center justify-between">
         <Link href="/" className="text-primary md:text-2xl">
           Falinantenaina
@@ -52,23 +69,23 @@ export const Navbar = () => {
         >
           {open ? <X /> : <MenuIcon />}
         </button>
-        <div
-          className={`bg-background border-border absolute top-[74px] left-0 z-50 h-max w-full border-b px-6 py-6 md:hidden ${open ? 'block' : 'hidden'}`}
-        >
-          <ul className="space-y-6">
-            {menus.map((menu, index) => (
-              <li key={index} className="w-full">
-                <Link
-                  className="block"
-                  href={menu.href}
-                  onClick={() => setOpen(false)}
-                >
-                  {menu.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {open && (
+          <div className="bg-background border-border absolute top-[74px] left-0 z-50 h-max w-full border-b px-6 py-6 md:hidden">
+            <ul className="space-y-6">
+              {menus.map((menu, index) => (
+                <li key={index} className="w-full">
+                  <Link
+                    className="block"
+                    href={menu.href}
+                    onClick={() => setOpen(false)}
+                  >
+                    {menu.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );
