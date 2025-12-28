@@ -20,7 +20,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: 'Falinantenaina Web Developer',
-  description: 'Web developer, fullstack develper, frontend developer'
+  description:
+    'Développeur Web, développeur front-end antananarivo, développeur Madagascar'
 };
 
 export default function RootLayout({
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="fr" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${ubuntu.variable} ${ibmPlexMono.variable} antialiased`}
       >

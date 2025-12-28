@@ -42,7 +42,7 @@ export const Contact = () => {
   };
 
   return (
-    <Section id="contact">
+    <Section id="contact" className="bg-card">
       <Heading
         title="Contact"
         desc="Envie de créer quelque chose d’exceptionnel ensemble? Écrivez-moi!"

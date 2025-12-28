@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <div className="bg-card flex items-center justify-between p-6 md:py-8 xl:px-32 xl:py-16">
+    <div className="bg-background flex items-center justify-between p-6 md:py-8 xl:px-32 xl:py-16">
       <div>&copy;{new Date().getFullYear()} Falinantenaina</div>
       <div className="flex items-center gap-x-8">
         <Link
