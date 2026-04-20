@@ -54,14 +54,13 @@ export const PinContainer = ({
           <div className={cn('relative z-50', className)}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title} href={href} />
+      <PinPerspective title={title} />
     </a>
   );
 };
 
 export const PinPerspective = ({
-  title,
-  href
+  title
 }: {
   title?: string;
   href?: string;
@@ -70,17 +69,13 @@ export const PinPerspective = ({
     <motion.div className="pointer-events-none z-[60] flex h-80 w-96 items-center justify-center opacity-0 transition duration-500 group-hover/pin:opacity-100">
       <div className="inset-0 -mt-7 h-full w-full flex-none">
         <div className="absolute inset-x-0 top-0 flex justify-center">
-          <a
-            href={href}
-            target={'_blank'}
-            className="bg-primary/10 relative z-10 flex items-center space-x-2 rounded-full px-4 py-0.5 ring-1 ring-white/10"
-          >
+          <button className="bg-primary/10 relative z-10 flex items-center space-x-2 rounded-full px-4 py-0.5 ring-1 ring-white/10">
             <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-white">
               {title}
             </span>
 
             <span className="from-primary/0 via-primary/90 to-primary/0 absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r transition-opacity duration-500 group-hover/btn:opacity-40"></span>
-          </a>
+          </button>
         </div>
 
         <div

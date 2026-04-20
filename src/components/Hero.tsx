@@ -76,7 +76,7 @@ export const Hero = () => {
             src={profilImage}
             width={960}
             height={1280}
-            className="bg-card size-70 rounded-full object-cover lg:size-80 xl:size-100"
+            className="bg-card border-primary size-70 rounded-full border-4 object-cover lg:size-80 xl:size-100"
             alt="profil"
           />
         </div>
